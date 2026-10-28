@@ -107,9 +107,8 @@ body {
                 }
 
                 button:focus-visible {
-                    background-color: hsl(158, 42%, 18%);
-                    border: 1px solid ;
-
+                    outline: 2px solid hsl(158, 42%, 18%);
+                    outline-offset: 3px;
                 }
             }
         }
@@ -123,8 +122,14 @@ body {
             .card {
                 flex-direction: row;
                 max-width: 600px;
-                flex-basis: 50%;
+
                 overflow: hidden;
+
+                picture,
+                .card-content {
+                    flex: 1;
+                    min-width: 0;
+                }
 
                 picture {
                     img {
@@ -136,9 +141,7 @@ body {
                     }
                 }
 
-                .card-content {
-                    width: 100%;
-                }
+                
             }
         }
     }
